@@ -1,19 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import Welcome from './Concepts/props' 
+import { useState } from "react";
+import "./App.css";
+import Welcome from "./Concepts/props";
+import NameInput from "./Concepts/stateLifting";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [name, setName] = useState(" "); 
 
   return (
     <>
-      <Welcome name="Fatima's Training Session" />
-
-      <div className="card">
-        <button onClick={() => setCount(count + 1)}>
-          +1 {'->'} {count}
-        </button>
-      </div>
+      <Welcome name={name} />
+      <NameInput onNameChange={setName} />
     </>
   );
 }
