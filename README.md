@@ -1,1 +1,1 @@
-# Training
+Quick recap of react knowledge
